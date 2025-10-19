@@ -6,7 +6,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Text style={styles.text}>Hello World 👋 </Text>
       <Text style={styles.text}>How are you ?</Text>
-
+      <Text>The wedding of Marta and Vlad</Text>
     </View>
   );
 }
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: 'pink',
   },
   text: {
     fontSize: 28,
