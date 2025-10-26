@@ -1,6 +1,7 @@
 import React from "react"
 import { Text , View , StyleSheet , FlatList , Button } from "react-native"
 import { useState } from "react"
+import { useRouter } from "expo-router"
 const data = [
   {id:"1" , text:"React"},
   {id:"2" , text:"React Native"},
@@ -8,6 +9,7 @@ const data = [
 ]
 export default function ListScreen({navigation} : {navigation : any}){
   const [count , setCount] = useState(0)
+  const router = useRouter()
 return(
   <View style={styles.container}>
     <FlatList data={data}
@@ -17,7 +19,7 @@ return(
     <Button color="blue"  title="Add" onPress={() => setCount(count + 1)} />
     <Button color="red" title="Minus" onPress={() => setCount(count - 1)}/>
       <Text>{count}</Text>
-   <Button title="To Do" onPress={() => navigation.navigate("To Do")}/>
+  <Button title="Go to To Do" onPress={() => router.push("/(tabs)/todo")} />
 </View>
 
 )
